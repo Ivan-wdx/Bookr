@@ -1,0 +1,269 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4e3c3;
+  padding: 10px 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Orange hover effect */
+nav a:hover,
+nav a.active {
+  color: orange;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 80px 100px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* More Section */
+.more-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.more-content {
+  display: flex;
+  background-color: white;
+  color: black;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.more-text {
+  padding: 50px;
+  width: 50%;
+}
+
+.more-text h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.more-text p {
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.more-img {
+  width: 50%;
+}
+
+.more-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tablet (iPad and below) */
+@media (max-width: 1024px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .logo-img {
+    width: 45px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .about-section {
+    padding: 50px 30px;
+  }
+
+  /* Center the More Than Books section */
+  .more-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .more-text {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .more-img {
+    width: 100%;
+  }
+
+  .more-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile (phones) */
+@media (max-width: 600px) {
+  /* Stack header elements */
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  /* Center and stack nav links */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center horizontally */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+
+  nav li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a.active {
+    color: orange;
+  }
+
+  /* Stack logo vertically */
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 45px;
+    margin: 0;
+  }
+
+  .logo {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  /* Center the "More Than Books" section */
+  .more-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .more-text {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .more-img {
+    width: 100%;
+  }
+
+  .about-section {
+    padding: 40px 20px;
+  }
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.logo-link:hover {
+  opacity: 0.9;
+}
